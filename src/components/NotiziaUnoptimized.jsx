@@ -4,7 +4,6 @@ export default function Notizia({ titolo, cont, onChangeTitle }) {
   console.log("Render Notizia " + titolo);
 
   const [inputShow, setInputShow] = useState(false);
-  const [titoloUpdate, setTitoloUpdate] = useState(titolo);
 
   return (
     <div>
@@ -12,15 +11,14 @@ export default function Notizia({ titolo, cont, onChangeTitle }) {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            onChangeTitle(titoloUpdate);
             setInputShow(false);
           }}
         >
           <input
             type="text"
-            name="titoloUpdate"
-            value={titoloUpdate}
-            onChange={(event) => setTitoloUpdate(event.target.value)}
+            name="titoloUpdateWrong"
+            value={titolo}
+            onChange={(event) => onChangeTitle(event.target.value)}
           />
         </form>
       ) : (
