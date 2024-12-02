@@ -14,7 +14,7 @@ function App() {
       <h1>{initialTitle}</h1>
       <section>
         {notizie.map(({titolo, contenuto}, i) => {
-          return <Notizia titolo={titolo} cont={contenuto} index={i}
+          return <Notizia titolo={titolo} cont={contenuto}
             callback={() => {
               clickHandler(i);
             }}
