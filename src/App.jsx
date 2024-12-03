@@ -3,6 +3,7 @@ import "./App.css";
 import { title as initialTitle } from "./data/news.js";
 import notizieInitial from "./data/news.js";
 import Notizia from "./components/Notizia.jsx";
+import Form from "./components/Form.jsx";
 import { useState } from "react";
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
   return (
     <>
       <h1>{initialTitle}</h1>
+      <section>
+        <Form/>
+      </section>
       <section>
         {notizie.map(({ titolo, contenuto }, i) => {
           return (
